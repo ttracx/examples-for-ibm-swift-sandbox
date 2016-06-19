@@ -1,5 +1,9 @@
 import Foundation
 
+print("\r\n--------------------------------------------")
+print("SwiftyJSON")
+print("--------------------------------------------")
+
 import SwiftyJSON
 
 func JSONExample() {
@@ -16,7 +20,10 @@ func JSONExample() {
 
 JSONExample()
 
-///////////////////////////////////////////////////////////////////////////////
+print("\r\n--------------------------------------------")
+print("Cryptor")
+print("--------------------------------------------")
+
 import Cryptor
 
 let key = CryptoUtils.byteArray(fromHex: "2b7e151628aed2a6abf7158809cf4f3c")
@@ -34,7 +41,10 @@ print("Ciphertext = " + CryptoUtils.hexString(from: cipherText!))
 let decryptedText = Cryptor(operation: .decrypt, algorithm: .aes, options: .none, key: key, iv: iv).update(byteArray: cipherText!)?.final()
 print("Decrypted  = " + CryptoUtils.hexString(from: decryptedText!))
 
-///////////////////////////////////////////////////////////////////////////////
+
+print("\r\n--------------------------------------------")
+print("HeliumLogger")
+print("--------------------------------------------")
 
 import HeliumLogger
 import LoggerAPI

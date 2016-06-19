@@ -64,3 +64,20 @@ Log.debug("This is a debug message.")
 
 let type = LoggerMessageType.info
 logger.log(type, msg: "This a dynamic message", functionName: "no func", lineNum: #line, fileName: #file)
+
+print("\r\n--------------------------------------------")
+print("Kitura")
+print("--------------------------------------------")
+
+import Kitura
+
+let router = Router()
+
+router.get("/") {
+request, response, next in
+    response.send("Hello, World!")
+    next()
+}
+
+Kitura.addHTTPServer(onPort: 8090, with: router)
+Kitura.run()

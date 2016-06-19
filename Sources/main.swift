@@ -1,6 +1,6 @@
 import Foundation
+
 import SwiftyJSON
-import Cryptor
 
 func JSONExample() {
     let json = JSON(["name":"naokits", "age": 50])
@@ -17,6 +17,7 @@ func JSONExample() {
 JSONExample()
 
 ///////////////////////////////////////////////////////////////////////////////
+import Cryptor
 
 let key = CryptoUtils.byteArray(fromHex: "2b7e151628aed2a6abf7158809cf4f3c")
 let iv = CryptoUtils.byteArray(fromHex: "00000000000000000000000000000000")
@@ -32,3 +33,24 @@ print("Ciphertext = " + CryptoUtils.hexString(from: cipherText!))
 
 let decryptedText = Cryptor(operation: .decrypt, algorithm: .aes, options: .none, key: key, iv: iv).update(byteArray: cipherText!)?.final()
 print("Decrypted  = " + CryptoUtils.hexString(from: decryptedText!))
+
+///////////////////////////////////////////////////////////////////////////////
+
+import HeliumLogger
+import LoggerAPI
+
+let logger = HeliumLogger()
+Log.logger = logger
+
+Log.verbose("This is a verbose log message.")
+
+Log.info("This is an informational log message.")
+
+Log.warning("This is a warning.")
+
+Log.error("This is an error.")
+
+Log.debug("This is a debug message.")
+
+let type = LoggerMessageType.info
+logger.log(type, msg: "This a dynamic message", functionName: "no func", lineNum: #line, fileName: #file)

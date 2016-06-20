@@ -2,6 +2,8 @@
 
 Example code and package settings for `IBM Swift Sandbox` using 3’d party packages like `SwiftyJson`.
 
+`IBM Swift Sandbox` で `SwiftyJson` のようなサードパーティのパッケージ（ライブラリ）を使用するサンプルです。
+
 ![](./images/result.png)
 
 ## Demo

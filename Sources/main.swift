@@ -65,6 +65,8 @@ Log.debug("This is a debug message.")
 let type = LoggerMessageType.info
 logger.log(type, msg: "This a dynamic message", functionName: "no func", lineNum: #line, fileName: #file)
 
+/*
+
 print("\r\n--------------------------------------------")
 print("Kitura")
 print("--------------------------------------------")
@@ -81,3 +83,5 @@ request, response, next in
 
 Kitura.addHTTPServer(onPort: 8090, with: router)
 Kitura.run()
+
+*/

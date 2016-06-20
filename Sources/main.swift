@@ -1,7 +1,10 @@
 /*
     Please choose `Swift Ver. 3.0 (May 9, 2016)` version
     and
-    choose Target: x86_64-ubuntu-linux-gnu
+    Target: x86_64-ubuntu-linux-gnu
+
+    See here:
+    https://github.com/naokits/examples-for-ibm-swift-sandbox/tree/master
  */
 
 
